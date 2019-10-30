@@ -1,0 +1,26 @@
+﻿<Window x:Class="OlineCinema.Плеер"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OlineCinema"
+        mc:Ignorable="d"
+        Title="Плеер" Height="450" Width="800" AllowsTransparency="True" WindowStyle="None" WindowState="Maximized" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <MediaElement x:Name="mediaE" LoadedBehavior="Manual"/>
+        <Grid Height="22" Width="298" Margin="251,0,251,10" VerticalAlignment="Bottom">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="59*"/>
+                <ColumnDefinition Width="59*"/>
+                <ColumnDefinition Width="60*"/>
+                <ColumnDefinition Width="60*"/>
+                <ColumnDefinition Width="60*"/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="minB" Content="Min" HorizontalAlignment="Left" Width="59" Click="MinB_Click" Background="#FF28333F" Foreground="White" Height="20" VerticalAlignment="Top"/>
+            <Button x:Name="maxB" Content="Max" Grid.Column="1" HorizontalAlignment="Left" Width="59" Background="#FF28333F" Foreground="White" Margin="0,0,0,2"/>
+            <Button x:Name="stopB" Content="Stop" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60" Click="StopB_Click" Height="20" Background="#FF28333F" Foreground="White"/>
+            <Button x:Name="pauseB" Content="Pause" Grid.Column="3" HorizontalAlignment="Left" VerticalAlignment="Top" Width="60" Click="PauseB_Click" Height="20" Background="#FF28333F" Foreground="White"/>
+            <Button x:Name="playB" Content="Play" Grid.Column="4" VerticalAlignment="Top" Click="PlayB_Click" Height="20" HorizontalAlignment="Left" Width="60" Background="#FF28333F" Foreground="White"/>
+        </Grid>
+    </Grid>
+</Window>
